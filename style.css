@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,700;1,300&display=swap');
+
 body{
 	background: white;
 	margin: 0 auto;
 	direction: rtl;
-	font-family: adobe arabic;
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 #container{
@@ -171,12 +173,37 @@ a {
 	height: 420px;
 	width: 100%;
 	border: none;
+	position: relative;
 	
 }
 
+.imgtxt{
+	position: absolute;
+	top : 50px;
+	left: 500px;
+}
 
+#imgtxt2{
+	position: absolute;
+	top : 80px;
+	left: 500px;
+	right: 60px;
+	text-align: left;
+	margin-top: 80px;
+	font-size: large;
+}
 
+#imgbutton{
 
+ 
+  color: white;
+  background: black;
+  font-size: large;
+  font-weight: 100;
+  padding: 10px 100px;
+  border-radius: 8px;
+
+}
 hr{
 	background: black;
 	width: 95%;
