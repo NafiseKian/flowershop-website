@@ -1,0 +1,125 @@
+<!DOCtype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="js/jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".hamburger-menu").click(function(){
+				$("span:nth-child(1)").toggleClass("rotate-1")
+				$("span:nth-child(2)").toggleClass("hide")
+				$("span:nth-child(3)").toggleClass("rotate-3")
+
+				$("li").each(function(){
+					$(this).toggleClass("active")
+				})
+			})
+		})
+	</script>
+</head>
+
+
+
+
+
+
+
+
+
+<body>
+
+	<div id="container">
+		
+			<div style="height: 40px;">
+		<nav>
+		<div class="hamburger-menu">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<ul>
+			<li><a href="index.html"> <img src="pics/c.png" width="40px"> </a></li>
+			<li><a href="shop.html"><img src="pics/b.png" width="40px"></a></li>
+			<li><a href="shop.html"><img src="pics/sh.png" width="40px"></a></li>
+			<li><a href="index.html"><img src="pics/h.png" width="40px"></a></li>
+		</ul>
+	    </nav>
+	    </div>
+	    <div id="header">
+		</div>
+
+
+
+
+		<div id="aboutUs" >
+			<div style="font-size: 40px; padding: 40PX;">
+				درباره ما  /  About us 
+			</div>
+			<p style="font-size:15px ; padding: 0 30px">
+				Flowers and plants are always a great gift for those you hold dear, or even yourself. Whether you're shopping for birthday flowers for your mom or you want to surprise your husband at the office with a lush bonsai plant, we've got you covered. Browse indoor plants perfect for the hard-working college student, bountiful flower arrangements bursting with magnificent blooms, and designer floral arrangements you can't find elsewhere. No matter the occasion, online flower deliveries will make your day shine!<br><br>
+				We know how to make a lasting impression with more than just flower delivery offerings. While our stunning orchids can brighten up any living space, sometimes the occasion calls for delectable chocolate morsels to satisfy a sweet tooth. For the more health-conscious foodies, we have thoughtfully selected fruit baskets and snack baskets, ideal for any occasion. 
+			</p>
+		</div>
+
+
+
+
+		<div id="products" >
+			<div class="proex" style="float: left; ">
+				<div class="propic">
+					<img src="pics/rose.png">
+					
+				</div>
+				<a href="product.html" class="button"> خرید / Buy </a>
+			</div>
+            <div class="proex" style="float: left;">
+            	<div class="propic">
+					<img src="pics/rose.png">
+
+				</div>
+				<a href="product.html" class="button"> خرید / Buy</a>
+            </div>
+            <div class="proex" style="float: left; ">
+            	<div class="propic">
+					<img src="pics/rose.png">
+				</div>
+				<a href="product.html" class="button">خرید / Buy</a>
+            </div>
+		</div>
+
+        <div style="height:200px">
+            <div style="font-size:50px ; padding  : 80px 50px; text-align: center;">
+            	مقالات
+            <hr>
+            </div>
+        </div>
+
+
+		<div id="articles">
+
+			<div class="proex" style="float: left;">
+				<img src="pics/flower1.jpg">
+			</div>
+            <div class="proex" style="float: left;">
+            	<img src="pics/flower2.jpg">
+            </div>
+            <div class="proex" style="float: left;">
+                <img src="pics/flower3.jpg">
+            </div>
+		</div>
+		
+
+		<div style="height:200px"></div> 
+	</div>
+
+	<div id="footer">
+		<div style="padding: 30px 30px ; text-align: center; font-size: 20px;">
+			this website has been made by Nafise Kian .... 2022 / June  <br>
+			contact me by nafise.kian00@gmail.com
+		</div>
+	</div>
+
+
+</body>
+</html>

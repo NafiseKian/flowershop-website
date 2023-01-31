@@ -1,0 +1,212 @@
+<!DOCtype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Product</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+
+
+	<script src="js/external.js"></script>
+	<script src="js/jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+
+			$(".next").click(function(){
+				var index = $("img.active").index();
+				$("img.active").fadeOut().removeClass("active").next().fadeIn().addClass("active")
+				if(index == $("img:last-child").index()){
+					$("img:first-child").fadeIn().addClass("active")
+				}
+			})
+
+			$(".prev").click(function(){
+				var index = $("img.active").index();
+				$("img.active").fadeOut().removeClass("active").prev().fadeIn().addClass("active")
+				if(index == 0){
+					$("img:last-child").fadeIn().addClass("active");
+				}
+			})
+
+			setInterval(function(){
+				var index = $("img.active").index();
+				$("img.active").fadeOut().removeClass("active").next().fadeIn().addClass("active")
+				if(index == $("img:last-child").index()){
+					$("img:first-child").fadeIn().addClass("active")
+				}
+			},3000)
+
+		})
+	</script>
+
+
+</head>
+
+
+
+
+
+
+
+
+<body>
+<div style="padding: 20px 40px">
+	<div id="header2"></div>
+	<div class="mainBox" >
+		
+		<div class ="slides" style="float:left;">
+		<i class="prev">
+		</i>
+		<div class="images">
+			<img class="A" src="pics/rose2.png" class="active">
+			<img class="A" src="pics/rose4.png"  >
+			<img class="A"src="pics/rose3.png" >
+		</div>
+		<i class="next"></i>
+		</div>
+
+
+
+
+		<div class ="price" style="float:left;">
+
+
+			<div class="pname"><p style="margin-right: 40px; font-size: 20px;"> 
+				گل رز هلندی
+				<hr>
+			</p></div>
+			
+            <div style="margin-right: 40px;">
+            	<p>
+            		گل رز هلندی اعلا و با کیفیت در بسته بندی های یک عددی تا چهار عددی موجود می باشد
+            		<br>
+            		مناسب جهت هدیه دادن و دکوراسیون . 
+            		<br>
+            		برای خرید محصول پس از انتخاب تعداد بر روی دکمه افزودن کلیک کنید
+            	      <br>تا قیمت نهایی محاسبه شود
+            	</p>
+            	<form id="cost">
+            	<label style="font-size: 20px;"> تعداد:
+
+            		<select name="unit"  id="pr" onchange="show()" style="padding: 3px 40px; font-size: 15px;">
+                    <option value="0" >0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    </select>
+            	</label>
+
+
+
+            	<label style="font-size: 20px; margin-right: 40px;"> رنگ:
+
+            		<select name="unit"  onchange="show()" style="padding: 3px 40px; font-size: 15px;">
+                    <option value="0" >آبی</option>
+                    <option value="1">سرخ</option>
+                    <option value="2">زرد</option>
+                    <option value="3">مشکی</option>
+                    <option value="4">صورتی</option>
+                    </select>
+            	</label>
+
+            	</form>
+            	<br><br>
+            	<p style="font-size: 20px;">
+            		قیمت واحد : 20 هزار تومان 
+                          <br>
+                          هزینه ارسال : 15 هزار تومان
+                          <br>
+            		<div id="total" style="font-size: 20px;">  
+                           مجموع  :
+            		</div>
+            	</p>
+            </div>
+            <br>
+            <div style="text-align: center;"> 
+             <input type="button" id="button" value="محاسبه هزینه کل" onclick="totalcost()"/>
+            </div>
+		</div>
+	</div>
+
+
+
+
+
+   <hr>
+
+
+
+
+	<div class ="info"  style="font-size: 20px; margin-right: 20px;">
+		
+		<div style="text-align: right; padding: 50px 20px;">
+			تکمیل اطلاعات:
+
+			<br><br>
+
+
+			<form>
+				<label>
+					نام و نام خانوادگی :
+					<input type="text" name="fullname" size="20" required />
+				</label>
+                     
+                    <br><br>
+
+				<label>
+					شماره تماس:
+					<input type="text" name="phonenumber" size="26" required />
+				</label>
+                    
+                    <br><br>
+                
+            	<label> شهر را انتخاب کنید
+
+            		<select name="city"  style="padding: 3px 40px; font-size: 15px;">
+                    <option value="0" > مشهد </option>
+                    <option value="1"> تهران </option>
+                    <option value="2"> رشت </option>
+                    <option value="3"> اصفهان </option>
+                    <option value="4"> شیراز </option>
+                    <option value="4"> همدان  </option>
+                    <option value="4">  بندر عباس  </option>
+
+                    </select>
+            	</label>
+
+
+                   <br><br>
+
+
+                <label> آدرس:
+                <textarea name="adress" cols="31" rows="5"  ></textarea><br><br>
+                </label>
+
+
+
+                <input type="checkbox" id="term1" /> پذیرش قوانین و مقررات<br><br>
+                <input type="submit" class="submit" value="تکمیل خرید" onclick="validation()" />
+
+
+			</form>
+		</div>
+	</div>
+
+
+
+<div style="padding: 40px 400px;">
+	<a href="shop.html" class="dokme"> بازگشت به فوشگاه</a>
+</div>
+
+
+</div>
+
+
+
+
+
+</body>
+</html>
