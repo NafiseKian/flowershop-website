@@ -117,12 +117,18 @@ a {
 }
 
 
-#products{
+.products{
 	height: 400px;
 	width: 100%;
 	background: white;
+	text-align: center;
 }
 
+.occasiondiv{
+	margin-top: 70px;
+	height: 300px;
+	text-align:center;
+}
 .proex{
 	width: 33.1%;
 	color: white;
@@ -133,7 +139,29 @@ a {
 
 }
 
+.occasionbox{
+	width: 16%;
+	color: white;
+	height: 150px;
+	border: 3px solid #6f7c51;
+	border-radius: 10px;
+	text-align: center;
+	margin: 20px 17px ;
 
+
+}
+
+.occasionbox :hover{
+	background-color: #d7dec7;
+	cursor: pointer;
+}
+
+.occasions{
+	color: #6f7c51;
+	height: 150px;
+	border-radius: 10px;
+	
+}
 .propic{
 	padding: 0px 50px;
 	margin-bottom: 40px;
